@@ -9,6 +9,7 @@ const initialState = {
 
 export const GlobalProvider = (props) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
+  console.log("initialState.watchlist", initialState.watchlist);
 
   const addMovieToWatchlist = (movie) => {
     var isInclude = state.watchlist.some((x) => {
