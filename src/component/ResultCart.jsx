@@ -8,7 +8,7 @@ const ResultCart = ({ movie }) => {
     let customMovie = {
       ...movie,
       type: type,
-      vote_average: Number(imdbRank),
+      vote_average: imdbRank,
     };
     addMovieToList(customMovie);
   };
@@ -19,9 +19,9 @@ const ResultCart = ({ movie }) => {
         movie.vote_average.toString().split(".")[0] +
         "." +
         movie.vote_average.toString().split(".")[1][0];
-      setImdbRank(customRank);
-      // console.log("typeOf customRank", typeof movie?.vote_average);
+      return setImdbRank(customRank);
     }
+    return setImdbRank(movie?.vote_average);
   };
   useEffect(() => {
     minimalizeImbdRank();

@@ -23,12 +23,12 @@ const Header = () => {
       <div className="container">
         <div className="inner-content">
           <div className="brand">
-            <Link to={"/watchlist"}> İzlenecekler</Link>
+            <Link to={"/watchlist"}>Watchlist</Link>
           </div>
           <ul className="nav-links">
             {locData && (
               <li>
-                <label>IMDB puanına göre sırala..</label>
+                <label>Sort by IMDB Rate..</label>
                 <select
                   onChange={(e) => {
                     sortList(e.target.value, locData);
@@ -38,18 +38,18 @@ const Header = () => {
                   id="sorting"
                   value={firstValue}
                 >
-                  <option value="">Seçiniz..</option>
+                  <option value="">Choose..</option>
                   <option value="asc" placeholder="Artan">
-                    Artan
+                    Asc
                   </option>
                   <option value="desc" placeholder="Azalan">
-                    Azalan
+                    Desc
                   </option>
                 </select>
               </li>
             )}
             <li>
-              <Link to={"/watched"}> İzlenenler</Link>
+              <Link to={"/watched"}>Watched</Link>
             </li>
             <li>
               <Link to={"/add"} className="btn">

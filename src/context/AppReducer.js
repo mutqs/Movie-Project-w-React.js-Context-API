@@ -25,17 +25,14 @@ const reducer = (state, action) => {
         ],
       };
     case "SORT_ASC_WATCHLIST": {
-      console.log(state, "reducerInside1");
       const sortedList = [...state.watchlist];
       sortedList.sort((a, b) => a.vote_average - b.vote_average);
-      console.log("sortedList", sortedList);
       return {
         ...state,
         watchlist: sortedList,
       };
     }
     case "SORT_DESC_WATCHLIST": {
-      console.log(state, "reducerInside2");
       return {
         ...state,
         watchlist: [
@@ -44,7 +41,6 @@ const reducer = (state, action) => {
       };
     }
     case "SORT_ASC_WATCHEDLIST": {
-      console.log(state, "reducerInside");
       return {
         ...state,
         watchedlist: [
@@ -53,7 +49,6 @@ const reducer = (state, action) => {
       };
     }
     case "SORT_DESC_WATCHEDLIST": {
-      console.log(state, "reducerInside");
       return {
         ...state,
         watchedlist: [
@@ -61,12 +56,6 @@ const reducer = (state, action) => {
         ],
       };
     }
-    // case "SORT_WATCHLIST": {
-
-    // }
-    // case "SORT_WATCHEDLIST": {
-
-    // }
     default:
       return state;
   }

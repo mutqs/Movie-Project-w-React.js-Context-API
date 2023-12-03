@@ -27,16 +27,6 @@ const Add = () => {
       });
   }
 
-  useEffect(() => {
-    fetch(
-      `https://raw.githubusercontent.com/recepkoseoglu/sample-api/master/database/dataset.json`
-    )
-      .then((response) => response.json())
-      .then((response) => {
-        console.log(response);
-      });
-  }, []);
-
   return (
     <div className="add-page">
       <div className="container">

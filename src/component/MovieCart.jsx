@@ -13,7 +13,6 @@ const MovieCart = ({ movie }) => {
       deleteType: deleteType,
     };
     deleteMovieFromList(customMovie);
-    console.log("deleteType", deleteType);
   };
   const minimalizeImbdRank = () => {
     let customRank;
@@ -23,9 +22,7 @@ const MovieCart = ({ movie }) => {
         "." +
         movie.vote_average.toString().split(".")[1][0]; // toFixed
       return setImdbRank(customRank);
-      // console.log("typeOf customRank", typeof movie?.vote_average);
     }
-    console.log("sahdgasjdlklasş", movie?.vote_average);
     return setImdbRank(movie?.vote_average);
   };
   useEffect(() => {

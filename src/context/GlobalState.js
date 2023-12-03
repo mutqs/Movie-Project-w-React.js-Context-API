@@ -16,7 +16,6 @@ export const GlobalProvider = (props) => {
       let isInclude = state.watchlist.some((x) => {
         return x.id === movie.id;
       });
-      console.log("movie", movie);
       if (state.watchlist.length > 0) {
         if (!isInclude) {
           dispatch({ type: "ADD_MOVIE_TO_WATCHLIST", payload: movie });
@@ -29,7 +28,6 @@ export const GlobalProvider = (props) => {
       let isInclude = state.watchedlist.some((x) => {
         return x.id === movie.id;
       });
-      // console.log("movie", movie);
       if (state.watchlist.length > 0) {
         if (!isInclude) {
           dispatch({ type: "ADD_MOVIE_TO_WATCHEDLIST", payload: movie });
@@ -46,15 +44,8 @@ export const GlobalProvider = (props) => {
     } else {
       dispatch({ type: "DELETE_MOVIE_FROM_WATCHEDLIST", payload: movie });
     }
-    // console.log("movieForDelete", movie);
   };
   const sortList = (sortType, listType) => {
-    console.log("sortType", sortType);
-    console.log("listType", listType);
-    // if(sortType == 'watchlist') {
-
-    // }
-
     if (listType === "watchlist") {
       if (sortType === "asc") {
         return dispatch({ type: "SORT_ASC_WATCHLIST", payload: "" });

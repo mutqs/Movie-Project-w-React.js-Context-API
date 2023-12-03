@@ -360,7 +360,7 @@ select {
 .movie-wrapper {
   display: flex;
   flex-wrap: wrap;
-  padding: 15px;
+  padding: 15px 30px;
 }
 
 .cart-wrapper {
@@ -371,10 +371,10 @@ select {
   border: 1px solid var(--primary);
   border-radius: 4px;
   margin: 0 10px 10px;
-  flex: 0 0 20%;
+  flex: 0 0 15%;
 }
 .cart-wrapper .overview {
-  max-height: 150px;
+  height: 150px;
   overflow-y: auto;
   text-overflow: ellipsis;
 }
@@ -385,8 +385,9 @@ select {
   font-size: 15px;
   color: #032541;
   width: 100%;
-  min-height: 45px;
+  height: 45px;
   padding: 5px 0;
+  overflow-y: auto;
 }
 
 .cart-wrapper .title span:first-child {
